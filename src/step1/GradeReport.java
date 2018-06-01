@@ -1,4 +1,4 @@
-package step1;
+package step2;
 /**[요구사항] 평균 점수에 따라 A ~ F 까지 등급을 부여하는
 프로그램을 작성해 주시오.
 100 ~ 90 A
@@ -14,7 +14,7 @@ package step1;
 | 홍길동 | 270 | 90 | A |*/
 
 import java.util.Scanner;
-public class GradeReport {
+public class ChallGrade0601 {
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		
