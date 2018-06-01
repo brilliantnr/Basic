@@ -1,4 +1,4 @@
-package step1;
+package step2;
 import java.util.Scanner;
 public class RPSGame{
 	public static void main(String[] args){
