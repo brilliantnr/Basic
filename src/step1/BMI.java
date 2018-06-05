@@ -13,14 +13,14 @@ BMI = 몸무게 / 키² 로서,
 25∼30은 '1단계 비만', 
 30∼35는 '2단계 비만' , 
 35 이상이면 '3단계 비만'으로 구분한다.
- * */
+ * */ 
 public class BMI {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner s = new Scanner(System.in);
 
 		while(true){
 			System.out.println("0.종료 1.실행");
-			int flag = sc.nextInt();
+			int flag = s.nextInt();
 		
 			switch(flag){
 				case 0 :
@@ -33,10 +33,10 @@ public class BMI {
 			}
 		
 		System.out.println("키(cm)를 입력하시오");
-		double h = sc.nextDouble();		
+		double h = s.nextDouble();		
 		System.out.println("몸무게(kg)를 입력하시오");
-		double w = sc.nextDouble();
-
+		double w = s.nextDouble();
+ 
 		double bmi = w/(h*h/10000) ;
 
 		String result = "";

@@ -53,7 +53,7 @@ public class Seq012_2 {
 					if (i % 2 != 0) {
 						count++;
 						if (count == totalCount) {
-							result += i + "=";
+							result += i + "="; 
 						} else {
 							result += i + "+";
 						}

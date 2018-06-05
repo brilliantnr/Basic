@@ -13,79 +13,79 @@ package step2;
 --------------------------------
 | 홍길동 | 270 | 90 | A |*/
 
-
 import java.util.Scanner;
+
 public class GradeReport {
-	public static int[] input(Scanner sc) {
+	public static boolean input(int score) {
+		/*if (score>=0 && score<=100) {
+			flag = true;
+		}else {
+			flag = false;
+		}
+		*/
 		
-		int k=0, e=0, m=0;
-		int[] result = new int[3];
-			System.out.print("국어점수?\n");
-			k = sc.nextInt();	
-			System.out.print("영어점수?\n");
-			e = sc.nextInt();		
-			System.out.print("수학점수?\n");
-			m = sc.nextInt();
-		result[0] = k;
-		result[1] = e;
-		result[2] = m;
+		return (score>=0 && score<=100);
+	} 
+	
+	 
+	public static String[] getTotal(String[] score) {
+		String[] result = new String[3];
+		result[0]= String.valueOf(Integer.parseInt(score[0])+
+				Integer.parseInt(score[1])+
+				Integer.parseInt(score[2]));
+		result[1]= String.valueOf(Integer.parseInt(result[0])/3) ;
 		return result;
 	}
-	public static void grade(Scanner sc) {
+	
+	public static String[] getGrade(String[] score) {
+		String[] result= new String[3];
+		result[0] = score[0]; 
+		result[1] = score[1];
 		
-		int k=0, e=0, m=0, avg=0, total=0;
-		int [] arr = input(sc);
-		k=arr[0];
-		e=arr[1];
-		m=arr[2];
-		
-		total = k+e+m;
-		avg = total/3;
-		
-		String gr = "";
-		String[] grade = new String[5];
-		
-		
-		grade[0]="A";
-		grade[1]="B";
-		grade[2]="C";
-		grade[3]="D";
-		grade[4]="E";
-		return grade;
-		
-		switch((avg/10)){
-			case 9 : grade = "A";break;
-			case 8 : grade = "B";break;
-			case 7 : grade = "C";break;
-			case 6 : grade = "D";break;
-			default : grade = "F";break;
-		}		
-		
-		
-		
+		switch(Integer.parseInt(result[1])/10){
+			case 9 : result[2] = "A";break;
+			case 8 : result[2] = "B";break;
+			case 7 : result[2] = "C";break;
+			case 6 : result[2] = "D";break;
+			default : result[2] = "F";break;
+		}
+		return result;
 	}
+	
 	
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
+		
 		while(true) {
 			System.out.println("0.종료 1.실행");
 			switch(sc.nextInt()) {
 			case 0 : System.out.println("종료합니다"); return;
 			case 1 : System.out.println("실행합니다"); 
+				
 				System.out.println("이름?");
-				String name="";
-				name = sc.next();
+				String name = sc.next();
+	
+			String[] sub= {"국어","영어","수학"};
+			String[] score = new String[3];
+			
+			for(int i=0;i<sub.length;i++) {
+				System.out.print(sub[i]+"점수?\n");
+				int temp=Integer.parseInt(sc.next());
+				if (input(temp)) {
+					score [i]=String.valueOf(temp);
+				}else {
+					i--;
+				}
+			}
 				
+				String[] arr = getGrade(getTotal(score));
 				
-				
-				
-				
-				int avg=0, total=0;
-				System.out.printf("******************************** \n"+"| 이름 | 총점 | 평균 | 등급 |\n");
-				System.out.printf("| "+name+" | "+total+" | "+avg+" | "+grade+" |\n");	
-				System.out.printf("| %s | %d | %d | %s |\n", name,total,avg,grade);
-				System.out.println("******************************** \n");
-				System.out.println("" );	
+				System.out.printf("************************************\n");
+				System.out.printf("| 이름 |  총점  |  평균  | 등급 |\n");
+				System.out.printf("-------------------------------------\n");
+				System.out.printf("| %s | %s | %s | %s |\n",
+						name,arr[0],arr[1],arr[2]);
+				System.out.print("************************************\n");	
 			break;
 			default : System.out.println("ERROR");break;
 			}

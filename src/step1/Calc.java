@@ -13,7 +13,7 @@ public class Calc{
 		String op = sc.next();
 		System.out.println("Enter Number2");
 		int num2 = sc.nextInt();
-		
+		 
 		int num3 = 0;
 		String result ="";
 

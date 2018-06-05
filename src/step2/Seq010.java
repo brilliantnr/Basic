@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
 * 기사시험문제: [수열010]
 * 1+2+3+...+100 까지의 합계 변형된 요구사항: 정수를 입력받아 두 수 사이의 합을 구하는 프로그램을
-* 구현하시오 출력 : 1+2+3+...+10=55
+* 구현하시오 출력 : 1+2+3+...+10=55 
 */
 public class Seq010 {
     public static void main(String[] args) {

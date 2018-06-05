@@ -15,7 +15,7 @@ public class Calendar{
 			case 9 : end = 30 ; break;
 			case 11 : end = 30 ; break;
 			default: end = 31 ; break;
-		}
+		} 
 
 		System.out.println(month+"월 "+end+"일 입니다.");
 

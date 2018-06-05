@@ -7,10 +7,10 @@ public class GradeReportFinal {
 		/*boolean flag = false;*/
 	/*	if(param>=0 && param<=100){
 			flag = true;
-		}else{
+		}else{ 
 			flag = false;
 		}
-		flag = (param>=0 && param<=100)?true:false;*/
+		flag = (param>=0 && param<=100)?true:false;*/ 
 		return (param>=0 && param<=100);
 	}
 	public static String[] getTotal(String[] params){

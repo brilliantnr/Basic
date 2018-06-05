@@ -22,7 +22,7 @@ import java.util.Scanner;
 public class CheckGender{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
-		
+		 
 		while (true) {
 			System.out.println("주민번호로 성별 알아보기 0.종료 1.실행");
 			switch (sc.nextInt()) {

@@ -36,7 +36,7 @@ public class GradeReportIng {
 	    return result;
 	}
 	public static void main(String[] args) {
-		String[] params = new Sc(System.in);
+		
 		String name = "";  
 		int kor = 0, eng = 0, math = 0, avg = 0, total = 0 ;
 		String grade="";

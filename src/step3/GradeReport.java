@@ -1,4 +1,4 @@
-package step1;
+package step3;
 /**[요구사항] 평균 점수에 따라 A ~ F 까지 등급을 부여하는
 프로그램을 작성해 주시오.
 100 ~ 90 A
@@ -23,7 +23,7 @@ public class GradeReport {
 			switch(sc.nextInt()) {
 			case 0 : System.out.println("종료합니다"); return;
 			case 1 : System.out.println("실행합니다"); 
-				
+	 			
 				System.out.println("이름?");
 				String name = sc.next();
 	
@@ -42,7 +42,7 @@ public class GradeReport {
 				if ( m<0 || m>100){
 					return ;
 				}
-				
+				 
 				String grade = "";
 				int ever = (k+e+m)/30;
 				switch(ever){
